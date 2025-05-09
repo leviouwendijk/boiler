@@ -1,11 +1,13 @@
 {
     "name": "@leviouwendijk/boiler",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "publishConfig": {
         "access": "public"
     },
     "main": "lib/index.js",
-    "files": ["lib"],
+    "files": [
+        "lib"
+    ],
     "scripts": {
         "build": "babel src --out-dir lib --copy-files",
         "prepare": "npm run build"
