@@ -1,19 +1,26 @@
 {
     "name": "@leviouwendijk/boiler",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publishConfig": {
         "access": "public"
     },
-    "main": "src/index.js",
+    "main": "lib/index.js",
+    "files": ["lib"],
+    "scripts": {
+        "build": "babel src --out-dir lib --copy-files",
+        "prepare": "npm run build"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/leviouwendijk/boiler.git"
     },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "description": "selection of boilerplate functions"
+    "description": "selection of boilerplate functions",
+    "devDependencies": {
+        "@babel/cli": "^7.27.2",
+        "@babel/core": "^7.27.1",
+        "@babel/preset-env": "^7.27.2"
+    }
 }
