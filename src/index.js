@@ -2,16 +2,16 @@
 
 // utils/
 // ../format/
-const { formatNull } = require('./utils/format/null.js');
-const { renameKeys, deleteKeys } = require('./utils/format/object.js');
+const { formatNull } = require("./utils/format/null.js");
+const { renameKeys, deleteKeys } = require("./utils/format/object.js");
 
 // ../generic/
-const { log, err } = require('./utils/generic/log.js');
-const { handleError } = require('./utils/generic/error.js');
-const { resolveEnvPath } = require('./utils/generic/path.js');
+const { log, err, configure } = require("./utils/generic/log.js");
+const { handleError } = require("./utils/generic/error.js");
+const { resolveEnvPath } = require("./utils/generic/path.js");
 
 // ../networking/
-const { getClientIp } = require('./utils/networking/ip.js');
+const { getClientIp } = require("./utils/networking/ip.js");
 
 module.exports = {
     // utils/
@@ -23,10 +23,10 @@ module.exports = {
     // ../generic/
     log,
     err,
+    configure,
     handleError,
     resolveEnvPath,
 
     // ../networking/
-    getClientIp,
+    getClientIp
 };
-
